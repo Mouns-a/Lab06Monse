@@ -163,6 +163,7 @@ button {
     /* ERROR 3: El contenido no está centrado en la página
        PISTA: Falta una propiedad que centra elementos de bloque horizontalmente */
     padding: 0 var(--spacing-lg);
+        margin: 0 auto;
 }
 
 .section {
@@ -216,6 +217,7 @@ button {
        Esto hace que el hover y otros estados se animen suavemente */
     cursor: pointer;
     white-space: nowrap;
+    transition: all var(--transition-base);
 }
 
 .btn--primary {
@@ -224,6 +226,7 @@ button {
     border: none;
     /* ERROR 5: El botón primario no tiene profundidad ni efecto de brillo
        PISTA: Falta la propiedad que agrega sombras al elemento */
+    transition: all var(--transition-base);
 }
 
 .btn--primary:hover {
@@ -283,6 +286,7 @@ button {
        PISTA: Falta una propiedad de flexbox que alinea items en el eje transversal */
     justify-content: space-between;
     height: 100%;
+    
 }
 
 .nav__logo {
