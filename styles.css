@@ -554,6 +554,7 @@ button {
 
 .interests__grid {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     /* ERROR 10: Las cards de intereses no se muestran en 3 columnas, están apiladas
        PISTA: Falta la propiedad de CSS Grid que define las columnas */
     gap: var(--spacing-xl);
@@ -563,6 +564,7 @@ button {
 .interest__card {
     background: var(--color-bg-card);
     border: 1px solid var(--color-bg-tertiary);
+    border-radius: var(--border-radius-lg);
     /* ERROR 11: Las cards de intereses tienen esquinas puntiagudas en vez de redondeadas
        PISTA: Falta la propiedad border-radius */
     padding: var(--spacing-xl);
@@ -580,6 +582,7 @@ button {
     height: 3px;
     background: var(--gradient-primary);
     transform: scaleX(0);
+    transition: transform var(--transition-base);
     /* ERROR 12 (AVANZADO): La línea superior de las cards aparece instantáneamente sin animación
        SOLUCIÓN: Falta la transición para la propiedad transform
        Agregar: transition: transform var(--transition-base);
@@ -782,8 +785,10 @@ button {
    SOLUCIÓN: Falta la propiedad color para el texto/icono
    Agregar: color: var(--color-text-primary);
    Los selectores específicos como --github necesitan definir su propio color */
+
 .social__icon--github {
     background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-primary);
 }
 
 .social__icon--email {
